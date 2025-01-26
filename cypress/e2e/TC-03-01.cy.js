@@ -1,4 +1,4 @@
-//Test en cours d'automatisation
+//Test non automatisatisé
 //La chaîne de cractères générée aléatoirement est censée fonctionner, mais le site refuse de le prendre
 
 
