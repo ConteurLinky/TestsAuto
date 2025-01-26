@@ -1,12 +1,18 @@
+//Test automatisé mais problématique
+//Fonctionne uniquement quand il y a assez d'utilisateurs et peut supprimer le compte admin utilisé dans le tests nécéssaires
+
 describe('template spec', () => {
   it('passes', () => {
     cy.visit('http://localhost:8080')
-    cy.get(':nth-child(1) > .control > .input').type("kanto@etu.univ-tours.fr")
-    cy.get(':nth-child(2) > .control > .input').type("MaCouille")
+    cy.get(':nth-child(1) > .control > .input').type("MaxTest@mail.com")
+    cy.get(':nth-child(2) > .control > .input').type("M@xouille07")
     cy.get('form').submit()
-    cy.get('ul > :nth-child(1) > a').click()
-    const emailbase = cy.get(':nth-child(11) > :nth-child(1) > input')
-    cy.get(':nth-child(11) > :nth-child(6) > button').click()
-    cy.get(':nth-child(11) > :nth-child(1) > input').should('not.have.value', emailbase)
+    cy.wait(1000)
+    cy.get('[href="/manage-users"]').click()
+    cy.wait(1000)
+    const emailbase = cy.get(':nth-child(9) > :nth-child(4) > input')
+    cy.get(':nth-child(9) > :nth-child(7) > button').click()
+    cy.reload()
+    cy.get(':nth-child(9) > :nth-child(4) > input').should('not.equal', emailbase)
   })
 })
