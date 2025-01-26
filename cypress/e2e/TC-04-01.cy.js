@@ -1,5 +1,6 @@
 //Test automatisé mais problématique
 //Fonctionne uniquement quand il y a assez d'utilisateurs et peut supprimer le compte admin utilisé dans le tests nécéssaires
+import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from './identifiants'
 
 describe('template spec', () => {
   it('passes', () => {

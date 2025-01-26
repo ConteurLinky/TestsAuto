@@ -3,8 +3,8 @@
 //Si vous souhaitez changer de compte d'admin ou d'emprunteur pour les tests, vous pouvez mettre les nouveaux emails/mdp ici
 
 //Administrateur
-const emailAdmin = "MaxTest@mail.com"
-const mdpAdmin = "M@xouille07"
+export const emailAdmin = "MaxTest@mail.com"
+export const mdpAdmin = "M@xouille07"
 //Emprunteur
-const emailEmprunteur = "user.user@gmail.com"
-const mdpEmprunteur = "User10!?"
+export const emailEmprunteur = "user.user@gmail.com"
+export const mdpEmprunteur = "User10!?"

@@ -1,5 +1,6 @@
 //Test automatisé mais attention
 //Fonctionne uniquement quand il y a assez de matériels
+import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from './identifiants'
 
 describe('template spec', () => {
   it('passes', () => {

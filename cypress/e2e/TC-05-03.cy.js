@@ -1,4 +1,5 @@
 //Test automatisé
+import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from './identifiants'
 
 
 describe('template spec', () => {
