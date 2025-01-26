@@ -1,5 +1,5 @@
 //Test correctement automatisé
-import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from './identifiants'
+import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from '../identifiants'
 
 describe('template spec', () => {
   const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -21,7 +21,7 @@ describe('template spec', () => {
     cy.get('form').submit()
     cy.wait(1000)
     cy.get('[href="/manage-users"] > .v-list-item__prepend').click()
-    cy.wait(2000)
+    cy.wait(3000)
     cy.get('.button').click()
 
     let nom = generateString(10)

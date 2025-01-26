@@ -1,6 +1,5 @@
 //Test correctement automatisé
-import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from './identifiants'
-
+import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from '../identifiants'
 
 describe('template spec', () => {
   it('passes', () => {
@@ -10,10 +9,15 @@ describe('template spec', () => {
     cy.get('form').submit()
     cy.wait(1000)
     cy.get('[href="/manage-users"] > .v-list-item__prepend').click()
-    cy.wait(1000)
+    cy.wait(3000)
     cy.get('.button').click()
-    cy.get('#email').type("aaaaaaa@gmail.com")
+    cy.get('#email').type("toutou@tours.fr")
+    cy.get('#password').type("Toutou123?")
+    cy.get('#firstName').type("Toutou")
+    cy.get('#lastName').type("ROUTULE")
+    cy.get(':nth-child(5) > #lastName').type("aaaaaaa")
     cy.get('form').submit()
-    cy.get('p').contains('Le prénom doit être alphanumérique (1-30 caractères). Le nom doit être alphanumérique (1-30 caractères). Le département doit être alphanumérique (1-30 caractères).')
+    cy.get('p').contains('ERR_EXIST : Un utilisateur avec cet email existe déjà.')
+
   })
 })

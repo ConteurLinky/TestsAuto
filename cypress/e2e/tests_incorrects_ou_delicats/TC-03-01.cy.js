@@ -1,6 +1,6 @@
 //Test non automatisatisé
 //La chaîne de cractères générée aléatoirement est censée fonctionner, mais le site refuse de le prendre
-import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from './identifiants'
+import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from '../identifiants'
 
 
 describe('template spec', () => {

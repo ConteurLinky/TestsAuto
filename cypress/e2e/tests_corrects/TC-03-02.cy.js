@@ -1,5 +1,5 @@
 //Test correctement automatisé
-import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from './identifiants'
+import {emailAdmin, emailEmprunteur, mdpAdmin, mdpEmprunteur} from '../identifiants'
 
 describe('template spec', () => {
   it('passes', () => {
@@ -9,7 +9,7 @@ describe('template spec', () => {
     cy.get('form').submit()
     cy.wait(1000)
     cy.get('[href="/manage-users"] > .v-list-item__prepend').click()
-    cy.wait(1000)
+    cy.wait(3000)
     cy.get(':nth-child(3) > :nth-child(2) > input').clear().type('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKL').type('{enter}')
     cy.on('window:alert',(t)=>{
       //assertions
